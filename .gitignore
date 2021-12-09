@@ -11,5 +11,3 @@
 
 # Local .terraform directories
 .terraform/
-*.zip
-.pytest_cache
