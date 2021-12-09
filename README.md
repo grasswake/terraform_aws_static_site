@@ -1,6 +1,6 @@
 # terraform_aws_static_site
 
-## Qiita
+## ブログ
 
 <https://blog.grasswake.me/tech_posts/1616684400>
 
