@@ -1,6 +1,6 @@
 resource "aws_route53_record" "www" {
-  zone_id = data.terraform_remote_state.route53.outputs.main_zone_id
-  name    = data.terraform_remote_state.route53.outputs.main_zone_name
+  zone_id = local.zone_id
+  name    = local.domain_name
   type    = "A"
 
   alias {

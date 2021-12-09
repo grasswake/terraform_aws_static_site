@@ -1,18 +1,19 @@
 terraform {
-  required_version = "= 0.14.7"
+  required_version = "= 1.0.11"
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "= 3.32.0"
+      version = "= 3.68.0"
     }
   }
+
   backend "s3" {
-    bucket  = "terraform-tfstate-1234567899"
     key     = "cloudfront/terraform.tfstate"
-    region  = "ap-northeast-1"
     encrypt = true
   }
 }
+
 
 provider "aws" {
   access_key = var.aws_access_key
@@ -30,21 +31,29 @@ provider "aws" {
 data "terraform_remote_state" "route53" {
   backend = "s3"
   config = {
-    bucket     = "terraform-tfstate-1234567899"
+    bucket     = var.backend_s3_bucket
     key        = "route53/terraform.tfstate"
     access_key = var.aws_access_key
     secret_key = var.aws_secret_key
-    region     = "ap-northeast-1"
+    region     = var.backend_s3_region
   }
 }
 
 data "terraform_remote_state" "acm" {
   backend = "s3"
   config = {
-    bucket     = "terraform-tfstate-1234567899"
+    bucket     = var.backend_s3_bucket
     key        = "acm/terraform.tfstate"
     access_key = var.aws_access_key
     secret_key = var.aws_secret_key
-    region     = "ap-northeast-1"
+    region     = var.backend_s3_region
   }
+}
+
+locals {
+  domain_name = data.terraform_remote_state.route53.outputs.main_zone_name
+
+  zone_id = data.terraform_remote_state.route53.outputs.main_zone_id
+
+  uppercase_domain_name = join("" , [for v in split(".", local.domain_name): title(v)])
 }

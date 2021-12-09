@@ -1,7 +1,8 @@
 
 resource "aws_s3_bucket" "origin_bucket" {
-  bucket = data.terraform_remote_state.route53.outputs.main_zone_name
+  bucket = local.domain_name
   acl    = "private"
+  force_destroy = true
 }
 
 resource "aws_s3_bucket_public_access_block" "origin_bucket" {
@@ -13,21 +14,26 @@ resource "aws_s3_bucket_public_access_block" "origin_bucket" {
 }
 
 resource "aws_s3_bucket" "logging_bucket" {
-  bucket = "cloudfront-logs.${data.terraform_remote_state.route53.outputs.main_zone_name}"
+  bucket = "cloudfront-logs.${local.domain_name}"
   acl    = "log-delivery-write"
+  force_destroy = true
 
   lifecycle_rule {
     id      = "s3-cloudfront-logs-transitions"
     enabled = true
 
     transition {
-      days          = "93"
+      days          = "90"
       storage_class = "STANDARD_IA"
     }
 
     transition {
-      days          = "365"
+      days          = "180"
       storage_class = "GLACIER"
+    }
+
+    expiration {
+      days = 365
     }
   }
 }
