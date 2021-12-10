@@ -3,6 +3,8 @@ function handler(event) {
   var uri = request.uri
   var headers = request.headers
 
+  // Basic 認証に用いる文字列(dXNlcjpwYXNzd29yZA==)の部分は shell などで以下のコマンドで生成します。
+  // echo -n user:password | base64
   var basicAuth = 'Basic dXNlcjpwYXNzd29yZA=='
 
   if (
