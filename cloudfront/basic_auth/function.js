@@ -34,15 +34,12 @@ function handler(event) {
 
     // パターン2: "/" で終わる場合は "/" を削ってリダイレクト
     return {
-      status: 302,
+      statusCode: 302,
       statusDescription: 'Found',
       headers: {
-        location: [
-          {
-            key: 'Location',
-            value: request.uri.replace(/\/+$/, '') || '/',
-          },
-        ],
+        location: {
+          value: request.uri.slice(0, -1),
+        },
       },
     }
   } else if (!uri.includes('.')) {
