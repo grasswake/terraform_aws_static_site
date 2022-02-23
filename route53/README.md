@@ -2,16 +2,16 @@
 
 ## Requirements
 
-| Name                                                                     | Version  |
-| ------------------------------------------------------------------------ | -------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | = 1.0.11 |
-| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | = 3.68.0 |
+| Name                                                                     | Version |
+| ------------------------------------------------------------------------ | ------- |
+| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | = 1.1.6 |
+| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | = 4.2.0 |
 
 ## Providers
 
 | Name                                             | Version |
 | ------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws) | 3.68.0  |
+| <a name="provider_aws"></a> [aws](#provider_aws) | = 4.2.0 |
 
 ## Modules
 
@@ -19,9 +19,9 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                              | Type     |
-| ----------------------------------------------------------------------------------------------------------------- | -------- |
-| [aws_route53_zone.main](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/route53_zone) | resource |
+| Name                                                                                                             | Type     |
+| ---------------------------------------------------------------------------------------------------------------- | -------- |
+| [aws_route53_zone.main](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/route53_zone) | resource |
 
 ## Inputs
 

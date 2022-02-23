@@ -2,17 +2,17 @@
 
 ## Requirements
 
-| Name                                                                     | Version  |
-| ------------------------------------------------------------------------ | -------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | = 1.0.11 |
-| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | = 3.68.0 |
+| Name                                                                     | Version |
+| ------------------------------------------------------------------------ | ------- |
+| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | = 1.1.6 |
+| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | = 4.2.0 |
 
 ## Providers
 
 | Name                                                                     | Version |
 | ------------------------------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws)                         | 3.68.0  |
-| <a name="provider_aws.us_east"></a> [aws.us_east](#provider_aws.us_east) | 3.68.0  |
+| <a name="provider_aws"></a> [aws](#provider_aws)                         | = 4.2.0 |
+| <a name="provider_aws.us_east"></a> [aws.us_east](#provider_aws.us_east) | = 4.2.0 |
 | <a name="provider_terraform"></a> [terraform](#provider_terraform)       | n/a     |
 
 ## Modules
@@ -21,12 +21,12 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                                                          | Type        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [aws_acm_certificate.main_cert](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/acm_certificate)                                  | resource    |
-| [aws_acm_certificate_validation.main_cert_validation](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/acm_certificate_validation) | resource    |
-| [aws_route53_record.main_cnames](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/route53_record)                                  | resource    |
-| [terraform_remote_state.route53](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state)                           | data source |
+| Name                                                                                                                                                         | Type        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| [aws_acm_certificate.main_cert](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/acm_certificate)                                  | resource    |
+| [aws_acm_certificate_validation.main_cert_validation](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/acm_certificate_validation) | resource    |
+| [aws_route53_record.main_cnames](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/route53_record)                                  | resource    |
+| [terraform_remote_state.route53](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state)                          | data source |
 
 ## Inputs
 

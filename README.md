@@ -2,7 +2,7 @@
 
 ## ブログ
 
-<https://blog.grasswake.me/tech_posts/1616684400>
+<https://blog.grasswake.me/tech-posts/1616684400>
 
 ## Terraform Command Sample
 

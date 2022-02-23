@@ -2,16 +2,16 @@
 
 ## Requirements
 
-| Name                                                                     | Version  |
-| ------------------------------------------------------------------------ | -------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | = 1.0.11 |
-| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | = 3.68.0 |
+| Name                                                                     | Version |
+| ------------------------------------------------------------------------ | ------- |
+| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | = 1.1.6 |
+| <a name="requirement_aws"></a> [aws](#requirement_aws)                   | = 4.2.0 |
 
 ## Providers
 
 | Name                                                               | Version |
 | ------------------------------------------------------------------ | ------- |
-| <a name="provider_aws"></a> [aws](#provider_aws)                   | 3.68.0  |
+| <a name="provider_aws"></a> [aws](#provider_aws)                   | = 4.2.0 |
 | <a name="provider_terraform"></a> [terraform](#provider_terraform) | n/a     |
 
 ## Modules
@@ -20,22 +20,25 @@ No modules.
 
 ## Resources
 
-| Name                                                                                                                                                          | Type        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [aws_cloudfront_cache_policy.this](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/cloudfront_cache_policy)                       | resource    |
-| [aws_cloudfront_distribution.cfd](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/cloudfront_distribution)                        | resource    |
-| [aws_cloudfront_function.basic_auth](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/cloudfront_function)                         | resource    |
-| [aws_cloudfront_origin_access_identity.oai](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/cloudfront_origin_access_identity)    | resource    |
-| [aws_cloudfront_origin_request_policy.this](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/cloudfront_origin_request_policy)     | resource    |
-| [aws_route53_record.www](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/route53_record)                                          | resource    |
-| [aws_s3_bucket.logging_bucket](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/s3_bucket)                                         | resource    |
-| [aws_s3_bucket.origin_bucket](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/s3_bucket)                                          | resource    |
-| [aws_s3_bucket_policy.origin_bucket_policy](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/s3_bucket_policy)                     | resource    |
-| [aws_s3_bucket_public_access_block.logging_bucket](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/s3_bucket_public_access_block) | resource    |
-| [aws_s3_bucket_public_access_block.origin_bucket](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/resources/s3_bucket_public_access_block)  | resource    |
-| [aws_iam_policy_document.origin_access_identity_policy](https://registry.terraform.io/providers/hashicorp/aws/3.68.0/docs/data-sources/iam_policy_document)   | data source |
-| [terraform_remote_state.acm](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state)                               | data source |
-| [terraform_remote_state.route53](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state)                           | data source |
+| Name                                                                                                                                                                                  | Type        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| [aws_cloudfront_cache_policy.this](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/cloudfront_cache_policy)                                                | resource    |
+| [aws_cloudfront_distribution.cfd](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/cloudfront_distribution)                                                 | resource    |
+| [aws_cloudfront_function.basic_auth](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/cloudfront_function)                                                  | resource    |
+| [aws_cloudfront_origin_access_identity.oai](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/cloudfront_origin_access_identity)                             | resource    |
+| [aws_cloudfront_origin_request_policy.this](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/cloudfront_origin_request_policy)                              | resource    |
+| [aws_route53_record.www](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/route53_record)                                                                   | resource    |
+| [aws_s3_bucket.logging_bucket](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/s3_bucket)                                                                  | resource    |
+| [aws_s3_bucket.origin_bucket](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/s3_bucket)                                                                   | resource    |
+| [aws_s3_bucket_acl.logging_bucket_acl](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/s3_bucket_acl)                                                      | resource    |
+| [aws_s3_bucket_acl.origin_bucket_acl](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/s3_bucket_acl)                                                       | resource    |
+| [aws_s3_bucket_lifecycle_configuration.logging_bucket_lifecycle_config](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/s3_bucket_lifecycle_configuration) | resource    |
+| [aws_s3_bucket_policy.origin_bucket_policy](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/s3_bucket_policy)                                              | resource    |
+| [aws_s3_bucket_public_access_block.logging_bucket](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/s3_bucket_public_access_block)                          | resource    |
+| [aws_s3_bucket_public_access_block.origin_bucket](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/resources/s3_bucket_public_access_block)                           | resource    |
+| [aws_iam_policy_document.origin_access_identity_policy](https://registry.terraform.io/providers/hashicorp/aws/4.2.0/docs/data-sources/iam_policy_document)                            | data source |
+| [terraform_remote_state.acm](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state)                                                       | data source |
+| [terraform_remote_state.route53](https://registry.terraform.io/providers/hashicorp/terraform/latest/docs/data-sources/remote_state)                                                   | data source |
 
 ## Inputs
 
